@@ -13,4 +13,11 @@ Estamos montando en fisico nuestro proyecto (piedra,papel,tijera), estamos hacie
 
 ![Proyecto_fisico](https://github.com/user-attachments/assets/ef3744e7-b4dc-4b85-ace7-7198b94f9a36)
 
+20/11/2025
+
+Hemos hecho una prueba en formato fisico de como funciona nuestro proyecto y es bastante funcional, pero añadiremos mejoras:
+
+https://github.com/user-attachments/assets/f2f93b62-7ad6-47eb-999d-e23f4c74a813
+
+
 
