@@ -7,9 +7,11 @@
 #include <Servo.h>
 
 // ------------------------- LCD -------------------------
+
 LiquidCrystal lcd(A0, A1, A2, A3, A4, A5);
 
 // ------------------------- Variables -------------------------
+
 volatile long A;
 
 // ------------------------- Funciones -------------------------
@@ -27,17 +29,20 @@ float checkDistance() {
 }
 
 // ------------------------- Servos -------------------------
+
 Servo servoPiedra;   // Pin 3
 Servo servoPapel;    // Pin 6
 Servo servoTijera;   // Pin 9
 
 // ------------------------- LEDs y Altavoz -------------------------
+
 const int red1 = 2;   // Piedra (LED azul)
 const int red2 = 4;   // Papel
 const int red3 = 5;   // Tijera
 const int speaker = 12;
 
 // ------------------------- APAGAR TODOS LOS LEDs -------------------------
+
 void apagarTodos() {
   digitalWrite(red1, HIGH); // LEDs invertidos → HIGH apaga
   digitalWrite(red2, HIGH);
@@ -45,6 +50,7 @@ void apagarTodos() {
 }
 
 // ------------------------- ENCENDER LED POR JUGADA -------------------------
+
 void encenderLED(int jugada) {
   apagarTodos();
   switch (jugada) {
@@ -55,6 +61,7 @@ void encenderLED(int jugada) {
 }
 
 // ------------------------- Setup -------------------------
+
 void setup() {
   lcd.begin(16, 2);
   lcd.setCursor(0, 0);
@@ -89,6 +96,7 @@ void setup() {
 }
 
 // ------------------------- Loop -------------------------
+
 void loop() {
   if (checkDistance() < 100) {
     A = random(1, 4); // 1=Piedra, 2=Papel, 3=Tijera
