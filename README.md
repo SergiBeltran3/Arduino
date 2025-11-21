@@ -5,8 +5,11 @@
 **Equipo: Sergi Beltran y Arturo Shagoyan**
 
 **Plan de Sprints:** 
+
 _- Sprint 1:_ **Definir el objetivo del proyecto, hacer un boceto en Tinkercad y subir las primeras versiones del código.**
+
 _- Sprint 2:_ **Prototipo mas avanzado (Circuito completo en Tinkercad, código mejorado) y lista de sensores.**
+
 _- LiveDemo:_ **Funcionamiento del prototipo (en físico), explicar el proyecto y responder a las preguntas.**
 
 🏁 **SPRINT 1 - PROGRESO DEL PROYECTO** 
@@ -14,6 +17,7 @@ _- LiveDemo:_ **Funcionamiento del prototipo (en físico), explicar el proyecto 
   🎯 _Objetivo del Proyecto:_
 
 El objetivo de este proyecto es construir un prototipo físico con Arduino que reaccione mediante sensores y actuadores para crear una experiencia interactiva.
+
 El sistema combinará:
 
 Sensor ultrasónico (HC-SR04)
