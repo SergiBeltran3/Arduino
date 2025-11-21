@@ -1,6 +1,7 @@
 # Arduino
 
 Equipo: Sergi Beltran y Arturo Shagoyan
+
 Proyecto: Piedra, Papel o Tijera
 
 13/11/2025
