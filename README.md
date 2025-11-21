@@ -40,6 +40,8 @@ Se ha creado un primer diseño del circuito en Tinkercad, donde se incluyen los 
 
 ## 💻 _Primeras versiones del código_
 
+## ✔️ _Objetivo:_ asegurar que el sensor funciona y da valores estables.
+
 ```cpp
 ### // Versión 1: Prueba del sensor HC-SR04
 
@@ -69,7 +71,7 @@ void loop() {
   delay(200);
 }
 ```
-## ✔️ _Objetivo:_ asegurar que el sensor funciona y da valores estables.
+## ✔️ _Objetivo:_ comprobar que no vibran y que responden bien.
 
 ```cpp
 ### // Versión 2: Control simple de servos
@@ -97,7 +99,6 @@ void loop() {
   delay(1000);
 }
 ```
-## ✔️ _Objetivo:_ comprobar que no vibran y que responden bien.
 
 ----------
 
