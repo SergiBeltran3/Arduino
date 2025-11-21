@@ -32,7 +32,7 @@ Botón / Potenciómetro
 
 El propósito es que el prototipo responda de forma dinámica a la distancia, a la interacción del usuario y a valores analógicos.
 
-    🛠️ _Boceto en Tinkercad_
+   🛠️ _Boceto en Tinkercad_
 
 Se ha creado un primer diseño del circuito en Tinkercad, donde se incluyen los principales sensores y actuadores del proyecto.
 
