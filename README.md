@@ -40,6 +40,7 @@ Se ha creado un primer diseño del circuito en Tinkercad, donde se incluyen los 
 
 ## 💻 _Primeras versiones del código_
 
+```cpp
 ### // Versión 1: Prueba del sensor HC-SR04
 
 const int trig = 11;
@@ -67,9 +68,10 @@ void loop() {
   Serial.println(dist);
   delay(200);
 }
-
+```
 ## ✔️ _Objetivo:_ asegurar que el sensor funciona y da valores estables.
 
+```cpp
 ### // Versión 2: Control simple de servos
 
 #include <Servo.h>
@@ -94,8 +96,10 @@ void loop() {
   sPiedra.write(0);
   delay(1000);
 }
-
+```
 ## ✔️ _Objetivo:_ comprobar que no vibran y que responden bien.
+
+----------
 
 💼 **REGISTRO DE TRABAJO** 💼
 
