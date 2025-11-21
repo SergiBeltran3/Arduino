@@ -20,15 +20,19 @@ El objetivo de este proyecto es construir un prototipo físico con Arduino que r
 
 El sistema combinará:
 
-Sensor ultrasónico (HC-SR04)
+(x1) Sensor ultrasónico (HC-SR04)
 
-LEDs
+(x3) LEDs
 
-Buzzer
+(x1) Buzzer
 
-Servo SG90
+(x3) Servo SG90
 
-Botón / Potenciómetro
+(x1) Potenciómetro
+
+(x1) Pantalla LCD 16x2
+
+(x4) Resistencias
 
 El propósito es que el prototipo responda de forma dinámica a la distancia, a la interacción del usuario y a valores analógicos.
 
