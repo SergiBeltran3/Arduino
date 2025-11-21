@@ -12,9 +12,9 @@ _- Sprint 2:_ **Prototipo mas avanzado (Circuito completo en Tinkercad, código 
 
 _- LiveDemo:_ **Funcionamiento del prototipo (en físico), explicar el proyecto y responder a las preguntas.**
 
-🏁 **SPRINT 1 - PROGRESO DEL PROYECTO** 
+# 🏁 **SPRINT 1 - PROGRESO DEL PROYECTO** 
 
-  🎯 _Objetivo del Proyecto:_
+## 🎯 _Objetivo del Proyecto:_
 
 El objetivo de este proyecto es construir un prototipo físico con Arduino que reaccione mediante sensores y actuadores para crear una experiencia interactiva.
 
@@ -32,15 +32,15 @@ Botón / Potenciómetro
 
 El propósito es que el prototipo responda de forma dinámica a la distancia, a la interacción del usuario y a valores analógicos.
 
-   🛠️ _Boceto en Tinkercad_
+## 🛠️ _Boceto en Tinkercad_
 
 Se ha creado un primer diseño del circuito en Tinkercad, donde se incluyen los principales sensores y actuadores del proyecto.
 
 <img width="925" height="701" alt="Captura de pantalla 2025-11-21 165456" src="https://github.com/user-attachments/assets/b8fd5d4f-8bc9-4498-bd7d-f6d0e8eb785a" />
 
-  💻 _Primeras versiones del código_
+## 💻 _Primeras versiones del código_
 
-// Versión 1: Prueba del sensor HC-SR04
+### // Versión 1: Prueba del sensor HC-SR04
 
 const int trig = 11;
 const int echo = 10;
@@ -68,9 +68,9 @@ void loop() {
   delay(200);
 }
 
-  ✔️ _Objetivo:_ asegurar que el sensor funciona y da valores estables.
+## ✔️ _Objetivo:_ asegurar que el sensor funciona y da valores estables.
 
-// Versión 2: Control simple de servos
+### // Versión 2: Control simple de servos
 
 #include <Servo.h>
 
@@ -95,7 +95,7 @@ void loop() {
   delay(1000);
 }
 
-  ✔️ _Objetivo:_ comprobar que no vibran y que responden bien.
+## ✔️ _Objetivo:_ comprobar que no vibran y que responden bien.
 
 💼 **REGISTRO DE TRABAJO** 💼
 
