@@ -1,0 +1,59 @@
+  🧩 Sensores y Actuadores Utilizados
+
+      Tipo        Nombre / Modelo           Función
+Sensor ultrasónico | HC-SR04 | Detecta la distancia frente al prototipo.
+LEDs | LED estándar 5 mm | Indicadores visuales según la interacción.
+Zumbador / Buzzer | Buzzer activo | Produce señales acústicas en ciertos eventos.
+Servomotor | SG90 (micro-servo) | Realiza movimiento mecánico controlado desde Arduino.
+Potenciómetro | 10kΩ | Permite entrada analógica para ajustar valores del sistema.
+Botón / Pulsador | Push button estándar |Entrada digital para acciones del usuario.
+
+  🔌 Componentes adicionales
+
+    Componente                   Especificación / Notas
+Protoboard         |   Tamaño estándar
+Resistencias       |   220Ω para LEDs, 10kΩ para pull-down del botón
+Cables Dupont      |   Macho-macho y macho-hembra
+Arduino UNO / Nano |   Placa principal del proyecto
+
+  🛠️ Esquema General del Circuito
+
+El circuito se diseñó inicialmente en Tinkercad. A continuación se explica cómo está conectado cada módulo.
+
+🔵 HC-SR04 (sensor de distancia)
+VCC  -> 5V  
+GND  -> GND  
+TRIG -> D9  
+ECHO -> D10
+
+🔴 LEDs
+
+Ánodo (positivo) -> Resistencia 220Ω -> Pin D3 / D4  
+Cátodo (negativo) -> GND
+
+🔔 Buzzer
+
+Positivo -> D6  
+Negativo -> GND
+  
+🟠 Potenciómetro
+
+Pin izquierdo -> 5V  
+Pin central  -> A0  
+Pin derecho  -> GND
+  
+🟡 Botón
+
+Un lado del botón -> Pin D2  
+El otro lado -> 5V  
+Resistencia 10kΩ -> D2 hacia GND (pull-down)
+
+🟣 Servo SG90
+
+Rojo   -> 5V  
+Marrón -> GND  
+Naranja -> Pin D5
+
+  📷 Esquema / Capturas del circuito
+
+Imágenes exportadas desde Tinkercad:
