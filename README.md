@@ -1,5 +1,8 @@
 # Arduino
 
+Equipo: Sergi Beltran y Arturo Shagoyan
+Proyecto: Piedra, Papel o Tijera
+
 13/11/2025
 
 Hoy hemos montado la maqueta de nuestro juego (Piedra, Papel y Tijera) en Tinkercad, aquí muestro la imagen:
