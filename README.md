@@ -4,6 +4,8 @@
 
 **Equipo: Sergi Beltran y Arturo Shagoyan**
 
+**Roles: *Sergi Beltran* (Montaje en Tinkercad / Programación) *Arturo Shagoyan* (Montaje en físico)**
+
 **Plan de Sprints:** 
 
 _- Sprint 1:_ **Definir el objetivo del proyecto, hacer un boceto en Tinkercad y subir las primeras versiones del código.**
