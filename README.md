@@ -4,7 +4,7 @@
 
 **Equipo: Sergi Beltran y Arturo Shagoyan**
 
-**Roles: *Sergi Beltran* (Montaje en Tinkercad / Programación) *Arturo Shagoyan* (Montaje en físico)**
+**Roles: *Sergi Beltran* (Montaje en Tinkercad / Programación) *Arturo Shagoyan* (Montaje en físico / Ayudante de programación)**
 
 **Plan de Sprints:** 
 
