@@ -153,7 +153,7 @@ LiquidCrystal lcd(A0, A1, A2, A3, A4, A5);
 // ------------------------- Variables -------------------------
 
 volatile long A;
-int ultimaJugada = 0; **// Nueva variable para guardar la última jugada**
+int ultimaJugada = 0; *// Nueva variable para guardar la última jugada**
 
 // ------------------------- Funciones -------------------------
 
@@ -201,7 +201,7 @@ void encenderLED(int jugada) {
   }
 }
 
-**// ------------------------- FUNCION PARA ELEGIR JUGADA SIN REPETIR -------------------------**
+*// ------------------------- FUNCION PARA ELEGIR JUGADA SIN REPETIR -------------------------**
 
 int elegirJugadaNoRepetida() {
   int nueva;
@@ -223,7 +223,7 @@ void setup() {
   delay(1000);
   lcd.clear();
 
-  **// Inicializar aleatoriedad**
+  *// Inicializar aleatoriedad**
   randomSeed(analogRead(A5));
 
   A = 0;
@@ -251,7 +251,7 @@ void setup() {
 
 void loop() {
   if (checkDistance() < 100) {
-    A = elegirJugadaNoRepetida(); **// Ahora usamos la función que evita repeticiones**
+    A = elegirJugadaNoRepetida(); *// Ahora usamos la función que evita repeticiones**
 
     tone(speaker, 131);
     delay(100);
