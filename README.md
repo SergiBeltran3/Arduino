@@ -295,6 +295,6 @@ void loop() {
   }
 }
 ```
-
+He marcado en rojo los comentarios donde se han implementado los diferentes cambios de aleatoriedad *("Random")* del proyecto.
 
 
