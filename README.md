@@ -170,6 +170,8 @@ A continuación se muestra la versión del código que ya integra:
 
 ### 💻 _Versión 3 – Integración completa del sistema_
 
+*En este código se puede observar el uso del circuito inverso en los LED's (LOW/apagado, HIGH/encendido)**
+
 ```cpp
 // =======================================================
 //  Proyecto: Piedra, Papel o Tijera automático
