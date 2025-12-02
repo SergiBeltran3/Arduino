@@ -166,6 +166,7 @@ A continuación se muestra la versión del código que ya integra:
 ✔ LEDs correspondientes a cada opción  
 ✔ Sonido con el buzzer  
 ✔ Lógica completa de Piedra – Papel – Tijera 
+✔ Lógica avanzada para que salga "random" en Piedra, Papel, Tijera
 
 ### 💻 _Versión 3 – Integración completa del sistema_
 
