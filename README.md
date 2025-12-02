@@ -113,7 +113,7 @@ Durante este sprint se ha avanzado significativamente en el desarrollo del proto
 
 El circuito se ha completado, el código principal ya integra todos los componentes, y se ha mejorado la documentación del proyecto.
 
-Hemos aplicado también el feedback que nos dio en el anterior sprint y añadido algunas mejoras.
+Hemos aplicado también el feedback que nos dieron en el anterior sprint y hemos añadido algunas mejoras.
 
 ---
 
