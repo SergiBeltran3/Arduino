@@ -105,31 +105,247 @@ void loop() {
   delay(1000);
 }
 ```
+# 🚀 **SPRINT 2 - PROGRESO DEL PROYECTO**
+
+## 🔧 _Mejoras realizadas desde el Sprint 1_
+
+Durante este sprint se ha avanzado significativamente en el desarrollo del prototipo.  
+El circuito se ha completado, el código principal ya integra todos los componentes, y se ha mejorado la documentación del proyecto.
+Hemos aplicado también el feedback que nos dio en el anterior sprint y añadido algunas mejoras.
+
+---
+
+## 🛠️ _Circuito en Tinkercad (versión avanzada)_
+
+Se ha actualizado el diseño anterior añadiendo:
+
+- Pantalla LCD 16x2 completamente conectada  
+- Sistema de 3 servomotores (piedra, papel y tijera)  
+- LED para cada resultado  
+- Sensor ultrasónico configurado correctamente  
+- Buzzer para el sonido del evento  
+- Ajuste del cableado para evitar interferencias  
+- Añadido potenciómetro para contraste del LCD
+
+📌 _Imagen del circuito actualizado:_
+
+Hemos realizado otro proyecto de Tinkercad con el circuito que vamos a usar en el proyecto (ya que encontramos un problema con el anterior), en este circuito hemos realizado un circuito inverso para los LED's de colores ya que nos hemos dado cuenta de que usando la otra técnica iba a ser un engorro a la hora de montar el proyecto, a continuación os muestro el circuito:
+
+<img width="987" height="740" alt="Captura de pantalla 2025-12-02 120017" src="https://github.com/user-attachments/assets/14db55b8-4b68-43e9-9b08-213cb76da641" />
+
+## 📦 _Lista de sensores y componentes (actualizada)_
+
+La lista requerida ya está completada en el archivo `hardware.md`.
+
+Incluye:
+
+- HC-SR04  
+- 3 servos SG90  
+- Pantalla LCD 16x2  
+- Buzzer  
+- LEDs + resistencias  
+- Potenciómetro  
+- Protoboard  
+- Cables Dupont
+
+---
+
+## 💻 _Código funcional implementado en el Sprint 2_
+
+A continuación se muestra la versión del código que ya integra:
+
+✔ Lectura del sensor ultrasónico  
+✔ Control de 3 servos  
+✔ Mensajes en la pantalla LCD 16x2  
+✔ LEDs correspondientes a cada opción  
+✔ Sonido con el buzzer  
+✔ Lógica completa de Piedra – Papel – Tijera 
+
+### 💻 _Versión 3 – Integración completa del sistema_
+
+```cpp
+// =======================================================
+//  Proyecto: Piedra, Papel o Tijera automático
+//  Autor: Sergi Beltran y Arturo Shagoyan
+// =======================================================
+
+#include <LiquidCrystal.h>
+#include <Servo.h>
+
+// ------------------------- LCD -------------------------
+
+LiquidCrystal lcd(A0, A1, A2, A3, A4, A5);
+
+// ------------------------- Variables -------------------------
+
+volatile long A;
+int ultimaJugada = 0; // Nueva variable para guardar la última jugada
+
+// ------------------------- Funciones -------------------------
+
+float checkDistance() {
+  digitalWrite(11, LOW);
+  delayMicroseconds(2);
+  digitalWrite(11, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(11, LOW);
+
+  float distance = pulseIn(10, HIGH) / 58.00;
+  delay(10);
+  return distance;
+}
+
+// ------------------------- Servos -------------------------
+
+Servo servoPiedra;   // Pin 3
+Servo servoPapel;    // Pin 6
+Servo servoTijera;   // Pin 9
+
+// ------------------------- LEDs y Altavoz -------------------------
+
+const int red1 = 2;   // Piedra (LED azul)
+const int red2 = 4;   // Papel
+const int red3 = 5;   // Tijera
+const int speaker = 12;
+
+// ------------------------- APAGAR TODOS LOS LEDs -------------------------
+
+void apagarTodos() {
+  digitalWrite(red1, HIGH); // LEDs invertidos → HIGH apaga
+  digitalWrite(red2, HIGH);
+  digitalWrite(red3, HIGH);
+}
+
+// ------------------------- ENCENDER LED POR JUGADA -------------------------
+
+void encenderLED(int jugada) {
+  apagarTodos();
+  switch (jugada) {
+    case 1: digitalWrite(red1, LOW); break; // Piedra
+    case 2: digitalWrite(red2, LOW); break; // Papel
+    case 3: digitalWrite(red3, LOW); break; // Tijera
+  }
+}
+
+// ------------------------- FUNCION PARA ELEGIR JUGADA SIN REPETIR -------------------------
+
+int elegirJugadaNoRepetida() {
+  int nueva;
+  do {
+    nueva = random(1, 4); // 1=Piedra, 2=Papel, 3=Tijera
+  } while (nueva == ultimaJugada);
+  ultimaJugada = nueva;
+  return nueva;
+}
+
+// ------------------------- Setup -------------------------
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.setCursor(0, 0);
+  lcd.print(" Piedra Papel y ");
+  lcd.setCursor(0, 1);
+  lcd.print(" Tijera ");
+  delay(1000);
+  lcd.clear();
+
+  // Inicializar aleatoriedad
+  randomSeed(analogRead(A5));
+
+  A = 0;
+
+  pinMode(11, OUTPUT);  // Trigger
+  pinMode(10, INPUT);   // Echo
+  pinMode(speaker, OUTPUT);
+
+  pinMode(red1, OUTPUT);
+  pinMode(red2, OUTPUT);
+  pinMode(red3, OUTPUT);
+
+  apagarTodos(); // LEDs apagados al inicio
+
+  servoPiedra.attach(3);
+  servoPapel.attach(6);
+  servoTijera.attach(9);
+
+  servoPiedra.write(0);
+  servoPapel.write(0);
+  servoTijera.write(0);
+}
+
+// ------------------------- Loop -------------------------
+
+void loop() {
+  if (checkDistance() < 100) {
+    A = elegirJugadaNoRepetida(); // Ahora usamos la función que evita repeticiones
+
+    tone(speaker, 131);
+    delay(100);
+    noTone(speaker);
+
+    lcd.setCursor(0, 0);
+    lcd.print(" Es....");
+
+    // Mostrar resultado en LCD y encender LED correspondiente
+    switch (A) {
+      case 1: // Piedra
+        lcd.setCursor(0, 1);
+        lcd.print("   Piedra!");
+        encenderLED(1);
+        servoPiedra.write(120);
+        delay(3000);
+        servoPiedra.write(179);
+        break;
+
+      case 2: // Papel
+        lcd.setCursor(0, 1);
+        lcd.print("   Papel!");
+        encenderLED(2);
+        servoPapel.write(120);
+        delay(3000);
+        servoPapel.write(179);
+        break;
+
+      case 3: // Tijera
+        lcd.setCursor(0, 1);
+        lcd.print("   Tijera!");
+        encenderLED(3);
+        servoTijera.write(120);
+        delay(3000);
+        servoTijera.write(179);
+        break;
+    }
+
+    delay(500);
+    lcd.clear();
+  }
+}
+```
 
 ----------
 
 💼 **REGISTRO DE TRABAJO** 💼
 
-13/11/2025
+**13/11/2025**
 
 Hoy hemos montado la maqueta de nuestro juego (Piedra, Papel y Tijera) en Tinkercad, aquí muestro la imagen:
 
 <img width="932" height="707" alt="Captura de pantalla 2025-11-13 100617" src="https://github.com/user-attachments/assets/1ee2d610-7e6a-458b-aeb8-52ec74db5a66" />
 
 
-18/11/2025
+**18/11/2025**
 
 Estamos montando en fisico nuestro proyecto (piedra,papel,tijera), estamos haciendo pruebas para solucionar los errores que nos van apareciendo
 
 ![Proyecto_fisico](https://github.com/user-attachments/assets/ef3744e7-b4dc-4b85-ace7-7198b94f9a36)
 
-20/11/2025
+**20/11/2025**
 
 Hemos hecho una prueba en formato fisico de como funciona nuestro proyecto y es bastante funcional, pero añadiremos mejoras:
 
 https://github.com/user-attachments/assets/f2f93b62-7ad6-47eb-999d-e23f4c74a813
 
-25/11/20245
+**25/11/2025**
 
 Hoy hemos hecho mas pruebas del minijuego (en físico) y hemos estado cambiando cosas y añadido otras (algunas nos han dado problemas y las hemos tenido que suprimir) por ejemplo queriamos aumentar el sonido del *Buzzer* (pero eso ha hecho que gaste mas energia y por ende causaba que la pantalla y los servos dejasen de funcionar), también hemos querido aumentar la velocidad de los servos (pero al tener mas velocidad, causaba que todos se moviesen por igual [Puede que en un futuro sigamos probando cosas] pero hasta ahora hemos decidido suprimir esa opción.
 
@@ -296,5 +512,3 @@ void loop() {
 }
 ```
 He marcado en rojo los comentarios donde se han implementado los diferentes cambios de aleatoriedad *("Random")* del proyecto.
-
-
