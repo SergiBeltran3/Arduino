@@ -523,3 +523,9 @@ void loop() {
 }
 ```
 He marcado en rojo los comentarios donde se han implementado los diferentes cambios de aleatoriedad *("Random")* del proyecto.
+
+**02/12/2025**
+
+Hoy he montado el segundo prototipo de Tinkercad (el que usaremos para la LiveDemo), este prototipo también es el que hemos usado para explicar el _Sprint 2_ donde hemos invertido el circuito de los LED's y hemos realizado un circuito inverso (a petición del profe, para que sea menos engorroso), gracias a esto hemos conseguido que los LED's funcionen dependiendo de lo que salga (Piedra, Papel o Tijera)
+
+<img width="987" height="740" alt="Captura de pantalla 2025-12-02 120017" src="https://github.com/user-attachments/assets/14db55b8-4b68-43e9-9b08-213cb76da641" />
