@@ -135,7 +135,7 @@ Hemos realizado otro proyecto de Tinkercad con el circuito que vamos a usar en e
 
 <img width="987" height="740" alt="Captura de pantalla 2025-12-02 120017" src="https://github.com/user-attachments/assets/14db55b8-4b68-43e9-9b08-213cb76da641" />
 
-Para compensar las resistencias de los LED's, hemos usado una resistencia de 330 Ω para los LED's:
+Para compensar las resistencias individuales de cada LED (220 Ω), hemos usado una resistencia de (330 Ω) para todos los LED's a la vez:
 
 <img width="316" height="143" alt="Captura de pantalla 2025-12-02 115959" src="https://github.com/user-attachments/assets/ca111e90-e4f0-4a78-b037-09052ce09f95" />
 
