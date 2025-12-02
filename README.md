@@ -529,3 +529,7 @@ He marcado en rojo los comentarios donde se han implementado los diferentes camb
 Hoy he montado el segundo prototipo de Tinkercad (el que usaremos para la LiveDemo), este prototipo también es el que hemos usado para explicar el _Sprint 2_ donde hemos invertido el circuito de los LED's y hemos realizado un circuito inverso (a petición del profe, para que sea menos engorroso), gracias a esto hemos conseguido que los LED's funcionen dependiendo de lo que salga (Piedra, Papel o Tijera)
 
 <img width="1008" height="748" alt="Captura de pantalla 2025-12-02 125210" src="https://github.com/user-attachments/assets/403ced24-868c-4293-883d-cfd0e466874e" />
+
+Así queda el montaje en físico:
+
+![WhatsApp Image 2025-12-02 at 12 55 26](https://github.com/user-attachments/assets/59e28b8d-f078-406c-b2f6-163e7165216c)
