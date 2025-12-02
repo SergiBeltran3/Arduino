@@ -131,9 +131,13 @@ Se ha actualizado el diseño anterior añadiendo:
 
 ## 📌 _Imagen del circuito actualizado:_
 
-Hemos realizado otro proyecto de Tinkercad con el circuito que vamos a usar en el proyecto (ya que encontramos un problema con el anterior), en este circuito hemos realizado un circuito inverso para los LED's de colores ya que nos hemos dado cuenta de que usando la otra técnica iba a ser un engorro a la hora de montar el proyecto, a continuación os muestro el circuito:
+Hemos realizado otro proyecto de Tinkercad con el circuito que vamos a usar en el proyecto (ya que encontramos un problema con el anterior), en este circuito hemos realizado un circuito inverso para los LED's de colores ya que nos hemos dado cuenta de que usando la otra técnica iba a ser un engorro a la hora de montar el proyecto, el circuito funciona de la siguiente manera: lo hace inverso, todo aquello que este en LOW (estará encendido) y todo aquello que este en HIGH (estatá apagado), a continuación os muestro el circuito:
 
 <img width="987" height="740" alt="Captura de pantalla 2025-12-02 120017" src="https://github.com/user-attachments/assets/14db55b8-4b68-43e9-9b08-213cb76da641" />
+
+Para compensar las resistencias de los LED's, hemos usado una resistencia de 330 Ω para los LED's:
+
+<img width="316" height="143" alt="Captura de pantalla 2025-12-02 115959" src="https://github.com/user-attachments/assets/ca111e90-e4f0-4a78-b037-09052ce09f95" />
 
 ## 📦 _Lista de sensores y componentes (actualizada)_
 
