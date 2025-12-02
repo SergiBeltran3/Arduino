@@ -129,7 +129,7 @@ Se ha actualizado el diseño anterior añadiendo:
 - Ajuste del cableado para evitar interferencias  
 - Añadido potenciómetro para contraste del LCD
 
-📌 _Imagen del circuito actualizado:_
+## 📌 _Imagen del circuito actualizado:_
 
 Hemos realizado otro proyecto de Tinkercad con el circuito que vamos a usar en el proyecto (ya que encontramos un problema con el anterior), en este circuito hemos realizado un circuito inverso para los LED's de colores ya que nos hemos dado cuenta de que usando la otra técnica iba a ser un engorro a la hora de montar el proyecto, a continuación os muestro el circuito:
 
