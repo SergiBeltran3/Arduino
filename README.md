@@ -110,7 +110,9 @@ void loop() {
 ## 🔧 _Mejoras realizadas desde el Sprint 1_
 
 Durante este sprint se ha avanzado significativamente en el desarrollo del prototipo.  
+
 El circuito se ha completado, el código principal ya integra todos los componentes, y se ha mejorado la documentación del proyecto.
+
 Hemos aplicado también el feedback que nos dio en el anterior sprint y añadido algunas mejoras.
 
 ---
