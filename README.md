@@ -696,7 +696,7 @@ void loop() {
     lcd.clear();
   }
   else {
-    apagarTodos();  // 👈 SE APAGAN LOS LEDS CUANDO NO HAY NADIE *//HEMOS AÑADIDO QUE CUANDO NO ESTÉ DETECTANDO NADA LOS LED'S SE APAGUEN**
+    apagarTodos();  *// 👈 SE APAGAN LOS LEDS CUANDO NO HAY NADIE *//HEMOS AÑADIDO QUE CUANDO NO ESTÉ DETECTANDO NADA LOS LED'S SE APAGUEN**
   }
 }
 ```
