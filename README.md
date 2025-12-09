@@ -703,4 +703,12 @@ void loop() {
 
 **09/12/2025**
 
+Hoy hemos encontrado un problema con el circuito, y nos hemos dado cuenta de que los servos se estaban consumiendo gran parte del circuito electrico de nuestro mininjuego, entonces lo que hemos hecho para solucionarlo es añadir una bateria (5v) para que gran parte de esa energia vaya hacia el circuito y no tengamos problemas con algunos componentes del circuito como la pantalla, los LED's y sobre todo los servos, con esto conseguimos solucionar algunos problemas.
 
+Esta es la bateria:
+
+![WhatsApp Image 2025-12-09 at 12 44 30](https://github.com/user-attachments/assets/e8448c38-3e2e-48fb-b3f0-d9d2ede3c4e4)
+
+Y este es el circuito con la bateria incorporada:
+
+![WhatsApp Image 2025-12-09 at 12 44 31](https://github.com/user-attachments/assets/d651d8a3-6cdb-4bfa-984f-533b8af05f44)
