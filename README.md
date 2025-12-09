@@ -337,26 +337,26 @@ void loop() {
 
 💼 **REGISTRO DE TRABAJO** 💼
 
-**13/11/2025**
+**13/11/2025** 📝
 
 Hoy hemos montado la maqueta de nuestro juego (Piedra, Papel y Tijera) en Tinkercad, aquí muestro la imagen:
 
 <img width="932" height="707" alt="Captura de pantalla 2025-11-13 100617" src="https://github.com/user-attachments/assets/1ee2d610-7e6a-458b-aeb8-52ec74db5a66" />
 
 
-**18/11/2025**
+**18/11/2025** 📝
 
 Estamos montando en fisico nuestro proyecto (piedra,papel,tijera), estamos haciendo pruebas para solucionar los errores que nos van apareciendo
 
 ![Proyecto_fisico](https://github.com/user-attachments/assets/ef3744e7-b4dc-4b85-ace7-7198b94f9a36)
 
-**20/11/2025**
+**20/11/2025** 📝
 
 Hemos hecho una prueba en formato fisico de como funciona nuestro proyecto y es bastante funcional, pero añadiremos mejoras:
 
 https://github.com/user-attachments/assets/f2f93b62-7ad6-47eb-999d-e23f4c74a813
 
-**25/11/2025**
+**25/11/2025** 📝
 
 Hoy hemos hecho mas pruebas del minijuego (en físico) y hemos estado cambiando cosas y añadido otras (algunas nos han dado problemas y las hemos tenido que suprimir) por ejemplo queriamos aumentar el sonido del *Buzzer* (pero eso ha hecho que gaste mas energia y por ende causaba que la pantalla y los servos dejasen de funcionar), también hemos querido aumentar la velocidad de los servos (pero al tener mas velocidad, causaba que todos se moviesen por igual [Puede que en un futuro sigamos probando cosas] pero hasta ahora hemos decidido suprimir esa opción.
 
@@ -524,7 +524,7 @@ void loop() {
 ```
 He marcado en rojo los comentarios donde se han implementado los diferentes cambios de aleatoriedad *("Random")* del proyecto.
 
-**02/12/2025**
+**02/12/2025** 📝
 
 Hoy he montado el segundo prototipo de Tinkercad (el que usaremos para la LiveDemo), este prototipo también es el que hemos usado para explicar el _Sprint 2_ donde hemos invertido el circuito de los LED's y hemos realizado un circuito inverso (a petición del profe, para que sea menos engorroso), gracias a esto hemos conseguido que los LED's funcionen dependiendo de lo que salga (Piedra, Papel o Tijera)
 
@@ -534,7 +534,7 @@ Así queda el montaje en físico:
 
 ![WhatsApp Image 2025-12-02 at 12 55 26](https://github.com/user-attachments/assets/59e28b8d-f078-406c-b2f6-163e7165216c)
 
-**04/12/2025**
+**04/12/2025** 📝
 
 Hemos solucionado errores que nos causanban los servos (distancia a la que giraban) y hemos solucionado pequeños detalles como por ejemplo la distancia a la que el ultrasonido detecta tu mano cuando te acercas, también hemos añadido que cuando no haya nadie jugando los LED's se apaguen, a continuación, os mostramos los cambios:
 
@@ -701,7 +701,7 @@ void loop() {
 }
 ```
 
-**09/12/2025**
+**09/12/2025** 📝
 
 Hoy hemos encontrado un problema con el circuito, y nos hemos dado cuenta de que los servos se estaban consumiendo gran parte del circuito electrico de nuestro mininjuego, entonces lo que hemos hecho para solucionarlo es añadir una bateria (5v) para que gran parte de esa energia vaya hacia el circuito y no tengamos problemas con algunos componentes del circuito como la pantalla, los LED's y sobre todo los servos, con esto conseguimos solucionar algunos problemas.
 
