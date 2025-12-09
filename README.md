@@ -1,4 +1,4 @@
-# Proyecto Arduino
+# Proyecto Piedra, Papel o Tijera 🪨📄✂️
 
 **Objetivo: Hacer un minijuego que sea igual al piedra, papel o tijera**
 
