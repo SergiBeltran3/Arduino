@@ -13,6 +13,7 @@ LiquidCrystal lcd(A0, A1, A2, A3, A4, A5);
 // ------------------------- Variables -------------------------
 
 volatile long A;
+int ultimaJugada = 0; // Nueva variable para guardar la última jugada
 
 // ------------------------- Funciones -------------------------
 
@@ -60,6 +61,17 @@ void encenderLED(int jugada) {
   }
 }
 
+// ------------------------- FUNCION PARA ELEGIR JUGADA SIN REPETIR -------------------------
+
+int elegirJugadaNoRepetida() {
+  int nueva;
+  do {
+    nueva = random(1, 4); // 1=Piedra, 2=Papel, 3=Tijera
+  } while (nueva == ultimaJugada);
+  ultimaJugada = nueva;
+  return nueva;
+}
+
 // ------------------------- Setup -------------------------
 
 void setup() {
@@ -98,8 +110,10 @@ void setup() {
 // ------------------------- Loop -------------------------
 
 void loop() {
-  if (checkDistance() < 100) {
-    A = random(1, 4); // 1=Piedra, 2=Papel, 3=Tijera
+  float distancia = checkDistance();
+
+  if (distancia < 10) { 
+    A = elegirJugadaNoRepetida();
 
     tone(speaker, 131);
     delay(100);
@@ -108,37 +122,39 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print(" Es....");
 
-    // Mostrar resultado en LCD y encender LED correspondiente
     switch (A) {
-      case 1: // Piedra
+      case 1:
         lcd.setCursor(0, 1);
         lcd.print("   Piedra!");
         encenderLED(1);
-        servoPiedra.write(120);
+        servoPiedra.write(90);
         delay(3000);
-        servoPiedra.write(179);
+        servoPiedra.write(0);
         break;
 
-      case 2: // Papel
+      case 2:
         lcd.setCursor(0, 1);
         lcd.print("   Papel!");
         encenderLED(2);
-        servoPapel.write(120);
+        servoPapel.write(90);
         delay(3000);
-        servoPapel.write(179);
+        servoPapel.write(0);
         break;
 
-      case 3: // Tijera
+      case 3:
         lcd.setCursor(0, 1);
         lcd.print("   Tijera!");
         encenderLED(3);
-        servoTijera.write(120);
+        servoTijera.write(90); 
         delay(3000);
-        servoTijera.write(179);
+        servoTijera.write(0); 
         break;
     }
 
     delay(500);
     lcd.clear();
+  }
+  else {
+    apagarTodos();  
   }
 }
